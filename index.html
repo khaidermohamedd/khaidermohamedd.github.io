@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohamed Khaider — AI Engineer</title>
+  <meta name="description" content="Portfolio de Mohamed Khaider — Ingénierie IA, Full-Stack & MLOps. Vision par ordinateur, détection d'anomalies, LLM/RAG, déploiement AWS." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800&family=Sacramento&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="is-loading">
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader">
+    <div class="loader__count" id="loaderCount">0%</div>
+    <svg class="loader__arc" viewBox="0 0 100 100" aria-hidden="true">
+      <path d="M15 50 A35 35 0 0 0 85 50" />
+    </svg>
+    <svg class="loader__hello" id="loaderHello" viewBox="0 0 600 220" aria-hidden="true">
+      <text x="50%" y="62%" text-anchor="middle">hello</text>
+    </svg>
+  </div>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor" id="cursor"><span class="cursor__label" id="cursorLabel"></span></div>
+
+  <!-- SVG filter for the "liquid" distortion of the hero title -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="liquid">
+      <feTurbulence id="liquidTurb" type="fractalNoise" baseFrequency="0.012 0.04" numOctaves="2" seed="3" result="noise" />
+      <feDisplacementMap id="liquidDisp" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo">khaider</a>
+    <nav class="nav__links">
+      <a href="#work" data-hover>Work</a>
+      <a href="#about" data-hover>About</a>
+      <a href="#experience" data-hover>Journey</a>
+      <a href="#expertise" data-hover>Expertise</a>
+      <a href="#contact" data-hover>Contact</a>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </header>
+
+  <div class="menu" id="menu">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#experience">Journey</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__grain"></div>
+      <h1 class="hero__title" id="heroTitle">
+        <span class="hero__big" id="heroBig">
+          <span class="split">AI ENGINEER</span>
+        </span>
+        <span class="hero__sub split">Full-Stack &amp; MLOps</span>
+      </h1>
+
+      <div class="hero__tags">
+        <span>Vision</span><i></i><span>Code</span><i></i><span>Data</span>
+      </div>
+
+      <div class="hero__scroll">
+        <span>Scroll to explore</span>
+        <span class="hero__scroll-line"></span>
+      </div>
+
+      <div class="hero__copy">©2026 <em>khaider</em></div>
+      <div class="hero__based">Based in Agadir, Morocco</div>
+
+      <a href="#contact" class="badge" data-hover data-cursor="hire">
+        <svg viewBox="0 0 120 120" class="badge__ring">
+          <defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0" /></defs>
+          <text><textPath href="#circ">OPEN TO PFE 2027 • OPEN TO PFE 2027 • </textPath></text>
+        </svg>
+        <span class="badge__arrow">↗</span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <div class="section-head reveal">
+        <h2>About me</h2>
+        <span class="section-head__line"></span>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__photo reveal" data-cursor="hi!">
+          <img src="assets/photo.jpg" alt="Portrait de Mohamed Khaider" />
+          <span class="about__name">Mohamed Khaider</span>
+        </div>
+
+        <div class="about__body">
+          <p class="eyebrow reveal">— Who I am</p>
+          <h3 class="about__lead reveal">
+            I build <span class="gold">intelligent systems</span> where <span class="gold">data meets code.</span>
+          </h3>
+          <div class="about__cols">
+            <p class="reveal">
+              Étudiant en <strong>Master Intelligence Artificielle &amp; Digital Computing</strong> à la FST Béni Mellal,
+              je conçois et déploie des systèmes IA de bout en bout.
+            </p>
+            <p class="reveal">
+              Du modèle (vision par ordinateur, détection d'anomalies, LLM/RAG) au pipeline temps réel (Kafka, Spark),
+              jusqu'à l'application full-stack sécurisée conteneurisée et déployée sur AWS.
+            </p>
+          </div>
+
+          <dl class="about__facts reveal">
+            <div><dt>Name</dt><dd>Mohamed Khaider</dd></div>
+            <div><dt>Role</dt><dd>AI Engineer</dd></div>
+            <div><dt>Status</dt><dd class="gold">Open to PFE 2027</dd></div>
+            <div><dt>Location</dt><dd>Agadir, Maroc</dd></div>
+            <div><dt>Education</dt><dd>Master IA &amp; DC</dd></div>
+            <div><dt>Languages</dt><dd>AR · FR · EN</dd></div>
+          </dl>
+
+          <div class="stats reveal">
+            <div><b data-count="99.44" data-dec="2">0</b><span>% accuracy NIDS</span></div>
+            <div><b data-count="5">0</b><span>projets IA majeurs</span></div>
+            <div><b data-count="2">0</b><span>stages industriels</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERTISE ============ -->
+    <section class="expertise" id="expertise">
+      <div class="expertise__left">
+        <span class="num">02</span>
+        <h2 class="expertise__title reveal">My<br />Expertise <span class="squiggle">∿</span></h2>
+        <p class="reveal">Je conçois des systèmes où modèles, données et logiciel fonctionnent comme un seul produit.</p>
+        <p class="muted reveal">De la recherche au déploiement : entraîner, servir, sécuriser et monitorer des modèles en production.</p>
+        <div class="floating-icons" aria-hidden="true">
+          <span class="fi" style="--x:8%;--y:10%;--d:0s">Py</span>
+          <span class="fi" style="--x:40%;--y:0%;--d:.6s">TF</span>
+          <span class="fi" style="--x:24%;--y:55%;--d:1.2s">☕</span>
+          <span class="fi" style="--x:62%;--y:40%;--d:1.8s">AWS</span>
+          <span class="fi" style="--x:80%;--y:4%;--d:2.4s">🐳</span>
+        </div>
+      </div>
+
+      <ul class="expertise__list" id="expList">
+        <li class="exp reveal" data-hover>
+          <span class="exp__icon">◎</span>
+          <div class="exp__txt">
+            <h4>Computer Vision</h4>
+            <p>Détection &amp; suivi temps réel : YOLOv8, ByteTrack, OpenCV, CNN (ResNet, U-Net).</p>
+          </div>
+          <div class="exp__chips"><span>YOLOv8</span><span>OpenCV</span><span>PyTorch</span></div>
+          <span class="exp__arrow">↗</span>
+        </li>
+        <li class="exp reveal" data-hover>
+          <span class="exp__icon">✦</span>
+          <div class="exp__txt">
+            <h4>Machine Learning &amp; LLM</h4>
+            <p>Détection d'anomalies, apprentissage fédéré, VAE, XGBoost, agents LLM + RAG explicables (SHAP).</p>
+          </div>
+          <div class="exp__chips"><span>TensorFlow</span><span>XGBoost</span><span>RAG</span></div>
+          <span class="exp__arrow">↗</span>
+        </li>
+        <li class="exp reveal" data-hover>
+          <span class="exp__icon">⌘</span>
+          <div class="exp__txt">
+            <h4>Full-Stack Development</h4>
+            <p>API REST Java Spring Boot sécurisées (JWT/OAuth2, RBAC) et interfaces Angular / React.</p>
+          </div>
+          <div class="exp__chips"><span>Spring Boot</span><span>Angular</span><span>React</span></div>
+          <span class="exp__arrow">↗</span>
+        </li>
+        <li class="exp reveal" data-hover>
+          <span class="exp__icon">☁</span>
+          <div class="exp__txt">
+            <h4>Cloud, Data &amp; MLOps</h4>
+            <p>Pipelines temps réel Kafka &amp; Spark, Docker, CI/CD GitHub Actions, déploiement AWS (ECS, RDS, S3).</p>
+          </div>
+          <div class="exp__chips"><span>Kafka</span><span>Docker</span><span>AWS</span></div>
+          <span class="exp__arrow">↗</span>
+        </li>
+        <li class="exp reveal" data-hover>
+          <span class="exp__icon">⛨</span>
+          <div class="exp__txt">
+            <h4>Secure by Design</h4>
+            <p>Chiffrement au repos, IAM moindre privilège, rate limiting, audit immuable, scan Trivy.</p>
+          </div>
+          <div class="exp__chips"><span>IAM</span><span>Trivy</span><span>Audit</span></div>
+          <span class="exp__arrow">↗</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="journey" id="experience">
+      <div class="section-head reveal">
+        <h2>Journey</h2>
+        <span class="section-head__line"></span>
+      </div>
+
+      <div class="journey__grid">
+        <div class="journey__col">
+          <p class="eyebrow reveal">— Experience</p>
+          <article class="tl reveal">
+            <span class="tl__date">Juil. — Août 2026</span>
+            <h4>Stage PFA — IA &amp; Vision par Ordinateur</h4>
+            <span class="tl__org">Holcim · Agadir</span>
+            <p>Système de surveillance HSE temps réel multi-caméras : détection d'absence d'EPI et de manœuvres
+              dangereuses d'engins. YOLOv8 (85 % accuracy), ByteTrack, pipeline 5 FPS, Kafka + Spark Streaming.</p>
+          </article>
+          <article class="tl reveal">
+            <span class="tl__date">2025 · 2 mois</span>
+            <h4>Stage technique — Développement Full-Stack</h4>
+            <span class="tl__org">Groupe OCP · Khouribga</span>
+            <p>Application de gestion de la maintenance industrielle : API REST Java Spring Boot et interface React.</p>
+          </article>
+        </div>
+
+        <div class="journey__col">
+          <p class="eyebrow reveal">— Education</p>
+          <article class="tl reveal">
+            <span class="tl__date">2025 — 2027</span>
+            <h4>Master IA &amp; Digital Computing</h4>
+            <span class="tl__org">FST Béni Mellal · USMS</span>
+          </article>
+          <article class="tl reveal">
+            <span class="tl__date">2024 — 2025</span>
+            <h4>Licence — Systèmes Informatiques Répartis</h4>
+            <span class="tl__org">FST Marrakech · UCA</span>
+          </article>
+          <article class="tl reveal">
+            <span class="tl__date">2022 — 2024</span>
+            <h4>DEUST — Sciences &amp; Techniques</h4>
+            <span class="tl__org">FST Marrakech · UCA</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="work" id="work">
+      <div class="work__intro">
+        <span class="work__kicker">Scroll to explore my</span>
+        <span class="work__kicker-line"></span>
+        <h2 class="work__title" id="workTitle">WORK</h2>
+        <div class="work__drips" id="workDrips"></div>
+        <div class="work__cats">
+          <span>Computer Vision</span><i></i><span>Machine Learning</span><i></i><span>Full-Stack</span><i></i><span>MLOps</span>
+        </div>
+      </div>
+
+      <div class="cards" id="cards">
+
+        <article class="card" style="--i:0" data-cursor="view">
+          <div class="card__meta"><span>01</span><span>2026 · Full-Stack × IA</span></div>
+          <div class="card__inner">
+            <div class="card__text">
+              <h3>SecureOps AI</h3>
+              <p class="card__desc">Copilote IA de détection d'anomalies avec agent d'investigation. Scoring XGBoost et agent LLM + RAG qui
+                enrichit chaque alerte d'un résumé et d'une recommandation — validation humaine obligatoire.</p>
+              <ul class="card__tags"><li>Spring Boot</li><li>Angular</li><li>JWT/OAuth2</li><li>LLM/RAG</li><li>AWS ECS</li></ul>
+            </div>
+            <div class="card__visual v-ops">
+              <div class="term">
+                <div class="term__bar"><i></i><i></i><i></i></div>
+                <pre>&gt; alert #4821  score=0.93
+&gt; agent: analysing context…
+&gt; RAG: 4 docs retrieved
+&gt; recommendation ready
+&gt; <span class="gold">awaiting human approval_</span></pre>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" style="--i:1" data-cursor="view">
+          <div class="card__meta"><span>02</span><span>2026 · Cybersécurité</span></div>
+          <div class="card__inner">
+            <div class="card__text">
+              <h3>NIDS-FL</h3>
+              <p class="card__desc">Détection d'intrusions réseau par apprentissage fédéré (FedAvg, 3 clients). Architecture Edge/Cloud
+                et apprentissage continu contre le concept drift.</p>
+              <div class="card__kpis">
+                <div><b>99.44%</b><span>accuracy cloud</span></div>
+                <div><b>65 Ko</b><span>vs 1,2 Go</span></div>
+                <div><b>−2%</b><span>F1 sur 8 sem.</span></div>
+              </div>
+              <ul class="card__tags"><li>FedAvg</li><li>TensorFlow</li><li>XGBoost</li><li>Edge/Cloud</li></ul>
+            </div>
+            <div class="card__visual v-fl">
+              <svg viewBox="0 0 300 220">
+                <g class="fl-links">
+                  <line x1="150" y1="50" x2="60" y2="170" /><line x1="150" y1="50" x2="150" y2="180" /><line x1="150" y1="50" x2="240" y2="170" />
+                </g>
+                <circle class="fl-pulse" cx="150" cy="50" r="26" />
+                <circle cx="150" cy="50" r="22" class="fl-server" />
+                <text x="150" y="55" text-anchor="middle">CLOUD</text>
+                <circle cx="60" cy="170" r="16" class="fl-node" /><circle cx="150" cy="180" r="16" class="fl-node" /><circle cx="240" cy="170" r="16" class="fl-node" />
+                <circle r="4" class="fl-packet"><animateMotion dur="2.2s" repeatCount="indefinite" path="M60 170 L150 50" /></circle>
+                <circle r="4" class="fl-packet"><animateMotion dur="2.2s" begin=".7s" repeatCount="indefinite" path="M150 180 L150 50" /></circle>
+                <circle r="4" class="fl-packet"><animateMotion dur="2.2s" begin="1.4s" repeatCount="indefinite" path="M240 170 L150 50" /></circle>
+              </svg>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" style="--i:2" data-cursor="view">
+          <div class="card__meta"><span>03</span><span>2026 · Data Science</span></div>
+          <div class="card__inner">
+            <div class="card__text">
+              <h3>Fraud Detection</h3>
+              <p class="card__desc">Détection de fraude bancaire non supervisée (VAE, Isolation Forest, LSTM-AE) sur données à 0,12 % de fraude.
+                Seuil calibré sur le coût métier et dashboard Streamlit explicable par SHAP.</p>
+              <div class="card__kpis">
+                <div><b>≈95×</b><span>vs hasard</span></div>
+                <div><b>+129%</b><span>vs Isolation Forest</span></div>
+                <div><b>−24%</b><span>coût métier</span></div>
+              </div>
+              <ul class="card__tags"><li>Python</li><li>VAE</li><li>SHAP</li><li>Streamlit</li></ul>
+            </div>
+            <div class="card__visual v-fraud">
+              <svg viewBox="0 0 300 200" id="fraudChart"></svg>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" style="--i:3" data-cursor="view">
+          <div class="card__meta"><span>04</span><span>2026 · Computer Vision</span></div>
+          <div class="card__inner">
+            <div class="card__text">
+              <h3>HSE Vision</h3>
+              <p class="card__desc">Surveillance de sécurité temps réel chez Holcim : détection d'absence d'EPI et de manœuvres dangereuses,
+                suivi multi-objets et agrégation des statistiques par caméra.</p>
+              <ul class="card__tags"><li>YOLOv8</li><li>ByteTrack</li><li>OpenCV</li><li>Kafka</li><li>Spark</li></ul>
+            </div>
+            <div class="card__visual v-cv">
+              <div class="cam">
+                <span class="cam__rec">● REC · CAM 03</span>
+                <div class="bbox b1"><span>person · helmet 0.91</span></div>
+                <div class="bbox b2 warn"><span>no-vest 0.87</span></div>
+                <div class="bbox b3"><span>forklift 0.94</span></div>
+                <span class="cam__fps">5 FPS</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" style="--i:4" data-cursor="view">
+          <div class="card__meta"><span>05</span><span>Search · Data Engineering</span></div>
+          <div class="card__inner">
+            <div class="card__text">
+              <h3>ResearchWatch &amp; ETL</h3>
+              <p class="card__desc">Moteur de recherche scientifique pour indexer et analyser un corpus d'articles, et chaîne ETL
+                avec dashboard dynamique.</p>
+              <ul class="card__tags"><li>Elasticsearch</li><li>Kibana</li><li>Apache NiFi</li><li>Python</li></ul>
+              <a class="card__link" href="https://github.com/khaidermohamedd/ResearchWatch" target="_blank" rel="noopener" data-hover>Voir sur GitHub ↗</a>
+            </div>
+            <div class="card__visual v-search">
+              <div class="search">
+                <div class="search__bar">⌕ <span id="typeTarget"></span><i class="caret"></i></div>
+                <div class="search__row"></div><div class="search__row"></div><div class="search__row"></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <p class="eyebrow reveal">— Got a project or an internship?</p>
+      <h2 class="contact__title reveal">Let's <span class="script">build</span><br />something smart.</h2>
+      <a class="contact__mail reveal" href="mailto:mohamed.khaider7@gmail.com" data-hover>mohamed.khaider7@gmail.com</a>
+      <div class="contact__links reveal">
+        <a href="https://github.com/khaidermohamedd" target="_blank" rel="noopener" data-hover>GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/mohamed-khaider-aa3ab22a5/" target="_blank" rel="noopener" data-hover>LinkedIn ↗</a>
+        <a href="tel:+212642939562" data-hover>+212 6 42 93 95 62</a>
+        <a href="assets/CV_KHAIDER_Mohamed.pdf" target="_blank" data-hover>Télécharger le CV ↓</a>
+      </div>
+      <footer class="footer">
+        <span>©2026 Mohamed Khaider</span>
+        <span>Designed &amp; built with care</span>
+        <a href="#top" data-hover>Back to top ↑</a>
+      </footer>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
